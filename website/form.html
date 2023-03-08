@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css" href="mystyle.css>"
+     <meta charset="utf-8">
+    <title>Prechilo form</title>
+
+</head>
+<style>
+
+    body {
+        background-color: red;
+    }
+
+    form {
+      color: white;
+      font-size: x-large;
+      border-color: blue;
+      border-radius: 10px;
+    }
+
+    input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    input.o[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 5px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+
+      input.q[type=radio] {
+        padding: 12px 12px;
+        margin: 8px 0;
+        font-size: 150px;
+        font-weight: bold;
+      }
+
+      input.o[type=submit] {
+        width: 50%;
+        background-color: gray;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: x-large;
+        margin-left: 300px;
+      }
+
+      input.o[type=submit]:hover {
+        background-color: yellow;
+      }
+      
+
+      div.u {
+        border-radius: 10px;
+        background-color: wheat;
+        padding: 40px;
+      }   
+      
+      form.w {
+        font-family: courier;
+      }
+</style>
+<body>
+
+
+<h1>This one is with legend use</h1>
+<form 
+action="http://www.w3schools.com/html/action_page.php" style="width: 50%; font-size: x-large; margin-left: 400px;">
+<fieldset>
+<legend>Sign up for free:</legend>
+<br>
+Firstname:<br>
+<input type="text" size="100px" style="height: 30px; border-radius: 20px; font-weight: bolder;">
+<br>
+Lastname:<br>
+<input type="text" size="100px" style="height: 30px; border-radius: 20px; font-weight: bolder;">
+<br>
+
+<br>
+
+
+
+<form 
+action="http://www.w3schools.com/html/action_page.php" style="width: 50%; font-size: x-large; margin-left: 400px;">
+  <select name="country">
+    <option 
+    value="Nigeria">Nigeria</option>
+    <option 
+    value="United state">United state</option>
+    <option
+    value="china">China</option>
+    <option
+    value="india">India</option>
+    <br><br>
+  
+
+  
+    <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>
+    <input type="submit" value="submit">
+
+</fieldset>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="u">
+  <form class="w" style="color: black;"
+  action="https://www.fiverr.com/punkweb01">
+<label for="fname">Firstname</label>
+<input class="o" type="text" id="fname" name="firstname">
+<label for="lname">Lastname</label>
+<input class="o" type="text" id="lname" name="lastname">
+
+<label 
+for="country">State</label>
+<select name="country" id="country">
+  <option 
+  value="usa">USA</option>
+  <option
+   value="cannada">Cannada</option>
+   <option 
+   value="nigeria">Nigeria</option>
+   <option 
+   value="england">England</option>
+   <option 
+   value="india">India</option>
+</select>
+
+<input class="q" type="radio" name="gender" value="male" checked> Male<br>
+<input class="q" type="radio" name="gender" value="female"> Female<br>
+<input class="q" type="radio" name="gender" value="other"> Other<br>
+
+<input class="o"
+ type="submit" value="Submit">
+</form>
+</div>
+
+
+</body>
+
+</html>

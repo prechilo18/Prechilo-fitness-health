@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prechilo</title>
+
+    <style>
+
+      body {
+        background: -moz-radial-gradient(gray,lightblue,white);
+        background: -webkit-radial-gradient(gray,lightblue,white);
+      }
+
+        ul.nav {
+         width: 100%;
+         list-style-type: none;
+         margin: 0%;
+         padding: 0%;
+         overflow: hidden;
+         border: 3px solid gray;
+         color: black;
+         background-color: aquamarine;
+         position: fixed;
+        }
+    
+        li {
+            float: right;
+            margin: 20px;
+        }
+    
+        li.a:hover:not(.active) {
+            color: white;
+            background-color: #4CAF50;
+            text-decoration: none;
+        }
+
+        li.a:active {
+           color: white;
+           background-color: gray;
+        }
+
+        
+
+
+        ul#menu {
+        padding: 0;
+      }
+
+      ul#menu li {
+        display: inline;
+      }
+
+      ul#menu li a {
+        background-color: blue;
+        color: aliceblue;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 6px 6px 6px 6px;
+      }
+
+     /* selected link */
+     ul#menu li a:hover {
+        background-color: yellow;
+      }
+
+      div.background {
+        background-image: url("file:///C:/Users/HP/Downloads/kgf.webp");
+        background-blend-mode: darken 6px;
+        border: 6px solid black;
+        opacity: 1;
+        
+      }
+
+      div.transbox {
+        margin: 30px;
+        background-color: white;
+        border: 5px solid blue;
+        opacity: 0.9;
+        filter: alpha(opacity=60); /* for IE8 and earlier */
+      }
+
+      div.transbox h1 p {
+        margin: 5%;
+        font-weight: bolder;
+        color: #000000;
+      }
+        div.app {
+         border: double;
+         border-width: 100%;
+         border-collapse: collapse;
+         background-color: white;
+         margin-top: 200px;
+        }
+
+        img {
+          opacity:1;
+          width: 100%;
+          filter: alpha(opacity=40); /* for IE8 and earlier*/
+        }
+
+
+        h1.s {
+
+        width: 80%;
+        height: 100%;
+        position: relative;
+        margin-bottom: 100px;
+        font-size: 35px;
+        font-weight: bolder;
+
+
+
+        -webkit-animation-name: prechilo;
+        /*chrome, safari, opera, firefox*/
+        -webkit-animation-duration: 6s;
+         /* chrome, safari, opera, firefox */
+         -webkit-animation-iteration-count: 50;
+         /* chrome, safari, opera, firefox */
+         -webkit-animation-direction: alternate;
+         /* chrome, safari, opera, firefox */
+              animation-name: prechilo;
+              animation-duration: 6s;
+              animation-iteration-count: 50;
+              animation-direction: alternate;
+      }
+
+      /* chrome, safari, opera, firefox */
+      @-webkit-keyframes prechilo {
+        0% {color:red; left:0px; top:0px;}
+        25% {color:yellow; left:700px; top:0px;}
+        50% {color:blue; left:700px; top:100px;}
+        75% {color:green; left:0px; top:100px;}
+        100% {color:red; left:0px; top:0px; }
+      }
+      
+      /* standard syntax*/
+      @keyframes prechilo {
+        0% {color:red; left:0px; top:0px;}
+        25% {color:yellow; left:700px; top:0px;}
+        50% {color:blue; left:700px; top:100px;}
+        75% {color:green; left:0px; top:100px;}
+        100% {color:red; left:0px; top:0px; }
+      }
+
+
+      * {box-sizing:border-box;}
+      body {font-family: verdana, sans-sherif;margin: 100px;}
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+      }
+
+      /* Position the "next button" to the right*/
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: black;
+      }
+
+      /* Caption text */
+      .text {
+        color: white;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 13px;
+        width: 13px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        -moz-animation-name: fade;
+        -moz-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+      @-moz-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+      
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width:300px) {
+        .slprev, .slnext, .text {font-size:11px}
+      }
+
+
+        
+      
+
+    
+    </style>
+</head>
+
+<body>
+  <h1 class="s">WELCOME TO PUNKWEB01 WEBSITE</h1>
+  <nav>
+    <ul id="menu">
+        
+        <li><a
+            href="file:///c:/Users/HP/Desktop/my%20coding/website/form.html" style="font-size: x-large; color: red;">Sign Up</a></li>
+        <li><a class="active" 
+            href="#contact us">Contact us</a></li>
+        <li><a 
+            href="#about us">About us</a></li>
+            <li><a
+            href="#news">News</a></li>
+            <li><a
+            href="#home">Home</a></li>
+           
+
+            </nav>
+  </nav>
+  <div class="slideshow-container">
+
+  <div class="myslideshow fade">
+    <div class="numbertext">1/3</div>
+    <img src="C:\Users\HP\Pictures\HHYH.png" alt="C:\Users\HP\Pictures\HHYH.png" style="width: 100%;">
+    <div class="text">
+      <h1>Amazing Theme</h1>
+      <p>FLEXIBLE AND CREATIVE.MEET THE NEW STYLE</p>
+    </div>
+  </div>
+
+  <div class="myslides fade">
+    <div class="numbertext">2/3</div>
+    <img src="C:\Users\HP\Desktop\PRECHILO 3D\yyutug.png" alt="C:\Users\HP\Desktop\PRECHILO 3D\yyutug.png" style="width: 100%;">
+    <div class="text">caption</div>
+  </div>
+
+  <div class="myslides fade">
+    <div class="numbertext">3\</div>
+    <img src="C:\Users\HP\Desktop\PRECHILO 3D\eugfvd.png" alt="C:\Users\HP\Desktop\PRECHILO 3D\eugfvd.png">
+    <div class="text">caption three</div>
+  </div>
+
+  <a class="prev"
+onclick="plusslides(-1)">&#10094</a>
+<a class="next"
+onclick="pluslides(1)">&#10095</a>
+</div>
+<br>
+
+<div style="text-align: center;">
+  <span class="dot"
+onclick="currentslide(1)"></span>
+  <span  class="dot"
+onclick="currentslide(2)"></span>
+  <span class="dot"
+onclick="currentslide(3)"></span>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showslide(slideindex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides =
+    document.getElementsByClassName("mySlides");
+    var dots =
+    document.getElementsByClassName("dot");
+     if (n > slides.length)
+    {slideIndex = 1}
+     if (n < 1) 
+    {slideIndex = slides.length};
+     for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+     }
+     for (i = 0; i < dots.length; i++)
+     {
+
+      dots[i].classList.remove("active");
+     }
+     slides[slideIndex-1].style.display = "block";
+     dots[slideIndex-1].classList.add("active");
+  }
+</script>
+
+
+<h1>This is our opinions to change the world</h1>
+  <img src= "c:\Users\HP\Downloads\Add your university here.png" alt="c:\Users\HP\Downloads\Add your university here.png" style="width: 304px; height: 228px;" style="background-color: rgb(34, 112, 58);">
+</div>
+<div class="background">
+<div class="transbox" style="text-align: center; text-decoration: double; background: -moz-radial-gradient(gray,skyblue,white); background: -webkit-radial-gradient(gray,skyblue,white);"><button
+onclick="PlayPause()">Play/Pause</button>
+<button 
+onclick="makeBig()">Big</button>
+<button
+onclick="makeSmall()">MakeSmall</button>
+<button
+onclick="MakeNormal()">MakeNormal</button>
+     <br><br>
+     <video id="video1" width="420px">
+      <source src="C:\Users\HP\Desktop\Peaky BLINDER\New folder\Descendants Of The Sun S01E01 (NetNaija.com).mp4"
+      type="video/mp4">
+      <source src="C:\Users\HP\Desktop\Peaky BLINDER\New folder\Descendants Of The Sun S01E01 (NetNaija.com).0gg"
+      type="video/ogg">
+      Your browser does not support HTML5 video.
+     </video>
+</div>
+
+<script>
+  var myvideo=
+  document.getElementById("video1");
+
+  function playpause() {
+    if (myvideo.paused) 
+        myvideo.play();
+    else
+        myvideo.pause();
+  }
+
+  function makeBig() {
+    myvideo.width=560;
+  }
+
+  function makeSmall() {
+  myvideo.width=320;
+  }
+
+  function MakeNormal() {
+    myvideo.width=420;
+  } 
+</script>
+
+</body>
+</body>
+</html>

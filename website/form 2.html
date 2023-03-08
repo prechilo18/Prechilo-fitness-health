@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+    type="text/css" href="mystyle.css>"
+     <meta charset="utf-8">
+    <title>Prechilo form</title>
+
+</head>
+<style>
+
+    body {
+        background-color: red;
+    }
+</style>
+
+
+<h1>This one is radio button</h1>
+<form border="6px" style="width: 50%; font-size: 20px; border-color: red; background-color: burlywood; margin-left: 400px;">
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+</form>
+
+<h1>This form is with submit button</h1>
+<form 
+action="http://www.w3schools.com/html/action_page.php">
+<br>
+Firstname:<br>
+<input type="text" value="firstname">
+<br>
+Lastname:<br>
+<input type="text" value="lastname">
+<br><br>
+<input type="submit" value="submit">
+</form>
+
+<h1>This one is with legend use</h1>
+<form 
+action="http://www.w3schools.com/html/action_page.php" style="width: 50%; font-size: x-large; margin-left: 400px;">
+<fieldset>
+<legend>This is my personal information:</legend>
+<br>
+Firstname:<br>
+<input type="text" value="firstname">
+<br>
+Lastname:<br>
+<input type="text" value="lastname">
+<br><br>
+<input type="submit" value="submit">
+</fieldset>
+</form>
+
+<h1>The element select drop down list</h1>
+<form 
+action="http://www.w3schools.com/html/action_page.php" style="width: 50%; font-size: x-large; margin-left: 400px;">
+  <select name="cars">
+    <option 
+    value="benz">Benz</option>
+    <option 
+    value="camry">Camry</option>
+    <option
+    value="volvo">Volvo</option>
+    <option
+    value="bmw">BMW</option>
+    <br><br>
+    <input type="submit" value="submit">
+  </select>
+</form>
+
+<h1>this form is used to tag the datalist</h1>
+<form 
+action="http://www.w3schools.com/html/action_page.php" style="width: 50%; font-size: x-large; margin-left: 400px;">
+  <input list="browsers" name="browsers">
+  <datalist id="browsers">
+    <option value="Internet 
+  Explorer">
+     <option value="firefox">
+      <option value="chrome">
+       <option value="opera">
+        <option value="safari">
+</datalist>
+<input type="submit">
+</form>
+
+</body>
+
+</html>
